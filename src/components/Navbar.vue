@@ -1,18 +1,14 @@
 <template>
   <ul>
-    <li><a href="default.asp">Home</a></li>
-    <li><a href="news.asp">News</a></li>
-    <li><a href="contact.asp">Contact</a></li>
-    <li><a href="about.asp">About</a></li>
+    <li><router-link to="/">helloWorld</router-link></li>
+    <li><router-link to="/home">Home</router-link></li>
+    <li><router-link to="/about">About</router-link></li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String,
-  },
+  name: 'NavbarComponent',
 };
 </script>
 
