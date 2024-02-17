@@ -16,7 +16,9 @@
             v-for="project in filteredProjects()"
             :key="project"
           >
-            <p>{{ project }}</p>
+            <p>
+              <router-link :to="project">{{ project }}</router-link>
+            </p>
           </div>
         </div>
         <div
@@ -26,6 +28,8 @@
           <p>No results found!</p>
         </div>
       </section>
+
+      <router-view></router-view>
     </main>
   </section>
 </template>
@@ -54,14 +58,18 @@
 
 // ------------------- with composition API-------------------
 
-import { ref, reactive } from 'vue';
+import { ref, reactive, inject } from 'vue';
 
 let searchFilter = ref('');
 
-const dummyProjects = reactive(['project 1', 'project 2', 'project 3']);
+const projectsList = inject('projectsList');
+
+const projectsNameList = reactive(
+  projectsList.map((project) => project.name.toUpperCase())
+);
 
 function filteredProjects() {
-  return dummyProjects.filter((project) =>
+  return projectsNameList.filter((project) =>
     project.toLowerCase().includes(searchFilter.value.toLowerCase())
   );
 }
@@ -75,6 +83,8 @@ function filteredProjects() {
 .projects-container > .project {
   border: 0.01em black solid;
   background-color: #f1f1f1;
+  width: 10em;
+  height: 3.5em;
   margin: 0.7em;
   padding: 20px;
   font-size: 2em;

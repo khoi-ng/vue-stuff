@@ -1,0 +1,8 @@
+Small/Easy Projects .----------------------
+Note APP, Weather API app,  Snake game
+
+Medium .-----------------------------------
+Bookshop (Booksalessite), Snake game
+
+Bigger/Harder Projects .------------------
+Roguelike role game with lvling System
