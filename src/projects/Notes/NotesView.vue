@@ -185,7 +185,7 @@ h1 {
   padding: 10px;
   border-radius: 15px;
   /* background-color: rgb(255, 255, 255); */
-  background-image: url('../../assets/notesProject/papier-textur-hintergrund.jpg');
+  background-image: url('../../assets/notes/papier-textur-hintergrund.jpg');
   background-size: 500px;
   /* background-size: cover; */
   border: black solid 1px;
@@ -202,7 +202,7 @@ h1 {
 }
 
 textarea {
-  background-image: url('../../assets/notesProject/papier-textur-hintergrund-opique.png');
+  background-image: url('../../assets/notes/papier-textur-hintergrund-opique.png');
   background-size: 600px;
   border-radius: 5px;
   border-color: cornflowerblue;

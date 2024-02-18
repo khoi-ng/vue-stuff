@@ -1,8 +1,7 @@
 <template>
   <section class="project">
-    <header><h1>Vue projects</h1></header>
+    <header><h1>Vue Projects</h1></header>
     <main>
-      <!-- It contains an article -->
       <section>
         <input
           type="text"
@@ -11,15 +10,11 @@
           @keyup="filteredProjects()"
         />
         <div class="projects-container">
-          <div
-            class="item project"
+          <ProjectCard
             v-for="project in filteredProjects()"
             :key="project"
-          >
-            <p>
-              <router-link :to="project">{{ project }}</router-link>
-            </p>
-          </div>
+            :project="project"
+          />
         </div>
         <div
           class="item error"
@@ -59,14 +54,13 @@
 // ------------------- with composition API-------------------
 
 import { ref, reactive, inject } from 'vue';
+import ProjectCard from '../components/ProjectCard.vue';
 
 let searchFilter = ref('');
 
 const projectsList = inject('projectsList');
 
-const projectsNameList = reactive(
-  projectsList.map((project) => project.name.toUpperCase())
-);
+const projectsNameList = reactive(projectsList.map((project) => project.name));
 
 function filteredProjects() {
   return projectsNameList.filter((project) =>
@@ -78,16 +72,9 @@ function filteredProjects() {
 <style scoped>
 .projects-container {
   display: flex;
-}
 
-.projects-container > .project {
-  border: 0.01em black solid;
-  background-color: #f1f1f1;
-  width: 10em;
-  height: 3.5em;
-  margin: 0.7em;
-  padding: 20px;
-  font-size: 2em;
-  cursor: pointer;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 0 auto;
 }
 </style>
