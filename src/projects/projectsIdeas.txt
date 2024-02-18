@@ -2,7 +2,8 @@ Small/Easy Projects .----------------------
 Note APP, Weather API app,  Snake game
 
 Medium .-----------------------------------
-Bookshop (Booksalessite), Snake game
+Bookshop (Booksalessite, idealy with API, if I find an suitable API for it)
+Something with API
 
 Bigger/Harder Projects .------------------
 Roguelike role game with lvling System

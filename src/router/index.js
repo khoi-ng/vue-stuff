@@ -2,7 +2,6 @@ import { createWebHashHistory, createRouter } from 'vue-router';
 import Home from '../views/HomeView.vue';
 import About from '../views/AboutView.vue';
 import Projects from '../views/ProjectsView.vue';
-import NotesProject from '../projects/Notes/NotesView.vue';
 
 // Import the projects files.
 
@@ -26,7 +25,6 @@ const routes = [
     component: Projects,
     props: true,
   },
-  { path: '/notes', component: NotesProject },
 ];
 
 const projectsList = [];
