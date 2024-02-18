@@ -36,13 +36,11 @@ const addNote = () => {
 
   // add Notes to LocalStorage
   if (localStorage.getItem(localStorageNotesKey) === null) {
-    console.log('test');
     localStorage.setItem(
       localStorageNotesKey,
       JSON.stringify(toRaw(notes.value))
     );
   } else {
-    console.log('test2');
     let existingNotes = JSON.parse(localStorage.getItem(localStorageNotesKey));
     existingNotes.push(note);
     localStorage.setItem(localStorageNotesKey, JSON.stringify(existingNotes));
