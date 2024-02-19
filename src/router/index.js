@@ -2,6 +2,7 @@ import { createWebHashHistory, createRouter } from 'vue-router';
 import Home from '../views/HomeView.vue';
 import About from '../views/AboutView.vue';
 import Projects from '../views/ProjectsView.vue';
+import Contact from '../views/ContactView.vue';
 
 // Import the projects files.
 
@@ -23,6 +24,11 @@ const routes = [
   {
     path: '/projects',
     component: Projects,
+    props: true,
+  },
+  {
+    path: '/contact',
+    component: Contact,
     props: true,
   },
 ];

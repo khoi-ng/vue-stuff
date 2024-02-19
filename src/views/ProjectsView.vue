@@ -73,6 +73,10 @@ function filteredProjects() {
 </script>
 
 <style scoped>
+.project {
+  margin-top: 3em;
+}
+
 .projects-container {
   display: flex;
   max-width: 1200px;
@@ -81,7 +85,7 @@ function filteredProjects() {
   margin: 0 auto;
 }
 
-input#search-Project {
-  margin-bottom: 20px;
-}
+/* input#search-Project {
+  margin-bottom: 0px;
+} */
 </style>

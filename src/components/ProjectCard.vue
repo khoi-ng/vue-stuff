@@ -39,7 +39,7 @@ const navigateToProject = () => {
 .card {
   width: 200px;
   height: 160px;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: #f1f1f1;
   background-size: 500px;
   /* background-size: cover; */
@@ -75,6 +75,6 @@ const navigateToProject = () => {
   /* font-weight: bold; */
   /* border-top: 1px solid black; */
   padding-top: 10px;
-  background-color: rgb(188, 188, 241);
+  background-color: rgb(172, 172, 172);
 }
 </style>

@@ -9,7 +9,7 @@
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/about">About</router-link></li>
       <li><router-link to="/projects">Vue Projects</router-link></li>
-      <li><router-link to="/">Contact</router-link></li>
+      <li><router-link to="/contact">Contact</router-link></li>
     </ul>
   </header>
 </template>
@@ -67,19 +67,18 @@ export default {
 #navbar li a {
   text-decoration: none;
   font-size: 16px;
-
   /* color: rgb(22 108 255); */
   color: rgb(8, 34, 80);
   transition: 0.3s ease;
 }
 
 #navbar li a:hover,
-#navbar li a.active {
+#navbar li a.router-link-active {
   /* color: rgb(245, 130, 23); */
   color: rgb(33, 121, 52);
 }
 
-#navbar li a.active::after,
+#navbar li a.router-link-active::after,
 #navbar li a:hover::after {
   /* content: '....'; */
   content: '';

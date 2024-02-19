@@ -10,10 +10,6 @@ export default [
     component: Bookstore,
     children: [
       {
-        path: '',
-        component: HomeView,
-      },
-      {
         path: 'books',
         name: 'books',
         component: BooksView,
@@ -22,6 +18,11 @@ export default [
         path: 'about',
         name: 'about',
         component: AboutView,
+      },
+      {
+        path: '',
+        name: 'home',
+        component: HomeView,
       },
     ],
   },

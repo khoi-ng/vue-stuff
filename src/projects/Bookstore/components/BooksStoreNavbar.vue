@@ -9,7 +9,7 @@
       <div class="nav-Logo">Bookstore</div></a
     >
     <ul id="bookstore-navbar">
-      <li><router-link class="active" to="/bookstore">Home</router-link></li>
+      <li><router-link to="/bookstore">Home</router-link></li>
       <li><router-link to="/bookstore/books">Books</router-link></li>
       <li><router-link to="/bookstore/about">About</router-link></li>
     </ul>
@@ -70,12 +70,12 @@
 }
 
 #bookstore-navbar li a:hover,
-#bookstore-navbar li a.active {
+#bookstore-navbar li a.router-link-active {
   /* color: rgb(245, 130, 23); */
   color: rgb(52, 100, 46);
 }
 
-#bookstore-navbar li a.active::after,
+#bookstore-navbar li a.router-link-active::after,
 #bookstore-navbar li a:hover::after {
   content: '....';
   width: 30%;
