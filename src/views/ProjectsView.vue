@@ -4,9 +4,10 @@
     <main>
       <section>
         <input
+          id="search-Project"
           type="text"
           v-model.trim="searchFilter"
-          placeholder="filter Projects"
+          placeholder="Search Projects"
           @keyup="filteredProjects()"
         />
         <div class="projects-container">
@@ -26,6 +27,7 @@
 
       <router-view></router-view>
     </main>
+    <Footer />
   </section>
 </template>
 
@@ -55,6 +57,7 @@
 
 import { ref, reactive, inject } from 'vue';
 import ProjectCard from '../components/ProjectCard.vue';
+import Footer from '../components/FooterComp.vue';
 
 let searchFilter = ref('');
 
@@ -72,9 +75,13 @@ function filteredProjects() {
 <style scoped>
 .projects-container {
   display: flex;
-
+  max-width: 1200px;
   flex-wrap: wrap;
   padding: 10px;
   margin: 0 auto;
+}
+
+input#search-Project {
+  margin-bottom: 20px;
 }
 </style>

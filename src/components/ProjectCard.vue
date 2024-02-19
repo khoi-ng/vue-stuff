@@ -37,13 +37,13 @@ const navigateToProject = () => {
 
 <style scoped>
 .card {
-  width: 250px;
-  height: 200px;
+  width: 200px;
+  height: 160px;
   border-radius: 15px;
   background-color: #f1f1f1;
   background-size: 500px;
   /* background-size: cover; */
-  border: 0.01em black solid;
+  border: 0.01em rgb(192, 185, 185) solid;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -55,9 +55,15 @@ const navigateToProject = () => {
   overflow: hidden;
 }
 
+.card:hover {
+  color: darkolivegreen;
+  border: 0.14em darkolivegreen solid;
+}
+
 .card img {
+  align-self: center;
   height: 140px;
-  width: auto;
+  width: 100px;
   margin: 0;
   padding: 5px;
 }
@@ -66,8 +72,8 @@ const navigateToProject = () => {
   width: 100%;
   height: 100%;
   margin: auto;
-  font-weight: bold;
-  border-top: 1px solid black;
+  /* font-weight: bold; */
+  /* border-top: 1px solid black; */
   padding-top: 10px;
   background-color: rgb(188, 188, 241);
 }
