@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="bookstoreMainSection">
     <BooksStoreNavbar />
     <!-- <header><h1>Bookstore</h1></header>
     <main class="content">
@@ -20,3 +20,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.bookstoreMainSection {
+  margin: 10px 10px 10px 10px;
+}
+</style>
