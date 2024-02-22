@@ -9,7 +9,10 @@
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-github"></a>
+        <a
+          href="https://github.com/khoi-ng?tab=repositories"
+          class="fa fa-github"
+        ></a>
       </div>
     </div>
     <div class="copyright"><p>Copyright © 2024</p></div>

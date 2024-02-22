@@ -7,13 +7,11 @@
         Vue.js is one of the most popular Frameworks for Webdevelopment it
         should be abit familiar with it. When I want to get more into
         Webdevelopment. -->
-
+        <!-- 
         <div class="img-container">
           <img class="me" src="../assets/img/me2.png" alt="" />
-          <!-- <div class="circle" id="circle0"></div>
-          <div class="circle" id="circle1"></div>
-          <div class="circle" id="circle2"></div> -->
-        </div>
+          
+        </div> -->
 
         <div class="personal-infos">
           <h2>
