@@ -1,5 +1,5 @@
 <template>
-  <div class="book-card">
+  <RouterLink :to="`book/${book._id}`" class="book-card">
     <div class="book-img-container">
       <img :src="book.thumbnailUrl" alt="" />
     </div>
@@ -9,11 +9,12 @@
       <p class="book-category">{{ book.categories.join(', ') }}</p>
       <p class="book-price">39,99€</p>
     </div>
-  </div>
+  </RouterLink>
 </template>
 
 <script setup>
 import { defineProps } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const bookref = defineProps(['book']);
 

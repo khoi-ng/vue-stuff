@@ -4,7 +4,7 @@
     <main class="content">
       <div class="row-container">
         <div class="img-container">
-          <img class="me" src="../assets/img/me2.png" alt="" />
+          <img class="me" src="../assets/img/nutzer.png" alt="" />
           <!-- <div class="circle" id="circle0"></div>
           <div class="circle" id="circle1"></div>
           <div class="circle" id="circle2"></div> -->
@@ -121,7 +121,7 @@ export default {
 }
 
 .row-container img.me {
-  width: 300px;
+  /* width: 300px; */
   height: 270px;
   /* background-color: rgb(214, 229, 230);
   border-radius: 50%; */

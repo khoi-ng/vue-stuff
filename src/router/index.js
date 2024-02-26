@@ -1,9 +1,9 @@
-import { createWebHashHistory, createRouter } from 'vue-router';
+import { createWebHistory, createRouter } from 'vue-router';
 import Home from '../views/HomeView.vue';
 import About from '../views/AboutView.vue';
 import Projects from '../views/ProjectsView.vue';
 import Contact from '../views/ContactView.vue';
-
+import NotFoundView from '../views/NotFoundView.vue';
 // Import the projects files.
 
 // Import all of the resource routes files.
@@ -20,6 +20,7 @@ const resourceRoutes = loadRoutes();
 
 const routes = [
   { path: '/', component: Home },
+  { path: '/home', redirect: '/' },
   { path: '/about', name: 'About', component: About },
   {
     path: '/projects',
@@ -30,6 +31,11 @@ const routes = [
     path: '/contact',
     component: Contact,
     props: true,
+  },
+  {
+    path: '/:catchall(.*)*',
+    name: 'Not Found',
+    component: NotFoundView,
   },
 ];
 
@@ -45,7 +51,8 @@ console.log('routes', routes);
 const router = createRouter({
   // Provide the history implementation to use. We
   // are using the hash history for simplicity here.
-  history: createWebHashHistory(),
+  history: createWebHistory(),
+  mode: 'history',
   routes, // short for `routes: routes`
 });
 
