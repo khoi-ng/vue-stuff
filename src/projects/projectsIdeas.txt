@@ -7,3 +7,7 @@ Something with API
 
 Bigger/Harder Projects .------------------
 Roguelike role game with lvling System
+
+
+JSON sample fomr 
+ "_comment": "// Sample taken from https://github.com/dudeonthehorse/datasets/blob/master/amazon.books.json",

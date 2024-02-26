@@ -23,6 +23,7 @@ export default {
 
 <style scoped>
 .bookstoreMainSection {
+  position: relative;
   margin: 10px 10px 10px 10px;
 }
 </style>

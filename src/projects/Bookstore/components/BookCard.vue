@@ -1,19 +1,24 @@
 <template>
   <div class="book-card">
     <div class="book-img-container">
-      <img
-        src="https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg"
-        alt=""
-      />
+      <img :src="book.thumbnailUrl" alt="" />
     </div>
     <div class="book-shortinfo">
-      <p class="book-author">W. Frank Ableson, Charlie Collins, Robi Sen</p>
-      <p class="book-title">Unlocking Android</p>
-      <p class="book-category">Open Source, Mobile</p>
+      <p class="book-author">{{ book.authors.join(', ') }}</p>
+      <p class="book-title">{{ book.title }}</p>
+      <p class="book-category">{{ book.categories.join(', ') }}</p>
       <p class="book-price">39,99€</p>
     </div>
   </div>
 </template>
+
+<script setup>
+import { defineProps } from 'vue';
+
+const bookref = defineProps(['book']);
+
+const book = JSON.parse(JSON.stringify(bookref.book));
+</script>
 
 <style scoped>
 .book-shortinfo p {
