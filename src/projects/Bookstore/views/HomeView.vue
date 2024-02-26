@@ -1,8 +1,4 @@
 <template>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
   <main class="content">
     <section id="hero">
       <div class="hero-content">
@@ -74,8 +70,8 @@ console.log('showbooks', newBooks);
 }
 
 .hero-content {
-  height: 90vh;
-  width: 100%;
+  /* height: 90vh; */
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -119,5 +115,13 @@ console.log('showbooks', newBooks);
 #hero button:hover {
   /* background-color: rgba(52, 100, 46, 0.3); */
   background-color: rgba(126, 219, 114, 0.3);
+}
+
+@media (max-width: 700px) {
+  #hero {
+    height: 10wh;
+    /* padding: 0 80px; */
+    background-position: top 30% right 30%;
+  }
 }
 </style>

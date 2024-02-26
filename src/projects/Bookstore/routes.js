@@ -3,6 +3,7 @@ import HomeView from './views/HomeView.vue';
 import AboutView from './views/AboutView.vue';
 import BooksView from './views/BooksView.vue';
 import BookView from './views/BookView.vue';
+import ShoppingCartView from './views/ShoppingCartView.vue';
 
 export default [
   {
@@ -19,6 +20,11 @@ export default [
         path: 'about',
         name: 'about',
         component: AboutView,
+      },
+      {
+        path: 'cart',
+        name: 'cart',
+        component: ShoppingCartView,
       },
       {
         path: '',

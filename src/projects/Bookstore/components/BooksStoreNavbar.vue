@@ -8,15 +8,47 @@
       />
       <div class="nav-Logo">Bookstore</div></a
     >
-    <ul id="bookstore-navbar">
-      <li><router-link to="/bookstore">Home</router-link></li>
-      <li><router-link to="/bookstore/books">Books</router-link></li>
-      <li><router-link to="/bookstore/about">About</router-link></li>
-    </ul>
+    <div>
+      <ul id="bookstore-navbar" :class="{ active: isActiveBurger }">
+        <i
+          id="close-burger"
+          class="fa fa-times"
+          @click="toogleBurgerMenu()"
+        ></i>
+
+        <li><router-link to="/bookstore">Home</router-link></li>
+        <li><router-link to="/bookstore/books">Books</router-link></li>
+        <li><router-link to="/bookstore/about">About</router-link></li>
+        <li>
+          <router-link to="/bookstore/cart"
+            ><i class="fa fa-shopping-bag"></i
+          ></router-link>
+        </li>
+      </ul>
+    </div>
+
+    <div id="mobile-burger">
+      <i id="bar" class="fa fa-bars" @click="toogleBurgerMenu()"></i>
+    </div>
   </header>
 </template>
 
+<script setup>
+import { ref } from 'vue';
+
+const isActiveBurger = ref(false);
+
+function toogleBurgerMenu() {
+  isActiveBurger.value = !isActiveBurger.value;
+}
+</script>
+
 <style scoped>
+.fa-shopping-bag {
+  margin-left: -4px;
+  padding-bottom: 3px;
+}
+
 .bookstore-icon {
   width: 30px;
   height: 30px;
@@ -86,5 +118,64 @@
   bottom: -5px;
   left: 15px;
   /* left: 20px; */
+}
+
+#mobile-burger {
+  display: none;
+}
+
+#close-burger {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  #bookstore-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    /* right: 0px; */
+    right: -320px;
+    height: 100vh;
+    width: 300px;
+    background-color: #e3e6fe;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
+    margin-top: 0;
+    padding: 170px 0 0 10px;
+    transition: 0.5s;
+  }
+
+  #bookstore-navbar.active {
+    right: 0px;
+  }
+
+  #bookstore-navbar li {
+    margin-bottom: 25px;
+  }
+
+  .fa-shopping-bag {
+    margin-left: 0;
+  }
+
+  #mobile-burger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  #mobile-burger i {
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  #close-burger {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 24px;
+    cursor: pointer;
+  }
 }
 </style>
